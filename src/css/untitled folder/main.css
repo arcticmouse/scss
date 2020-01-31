@@ -1,0 +1,211 @@
+.main-grid{
+	margin: 30px auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, minmax(120px, 380px));
+	grid-gap: 30px;
+}
+@media (max-width: 768px) {
+	.main-grid { 
+		grid-template-columns: 1fr;
+	}
+}
+
+.main-grid .component {
+	width: 100%;
+	line-height: 22px;
+	font-size: 15px;
+}
+@media (max-width: 768px) {
+	.main-grid .component { 
+		grid-column: 1 / 1;
+	}
+}
+
+
+/*****promo thumbnail*****/
+.main-grid .component .promo.thumbnail img { border-bottom: 8px solid #c4820e; }
+.main-grid .component .promo.thumbnail .caption h3 {
+	color: #003262;
+	text-transform: none;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 400;
+	margin: 0;
+	font-family: "freight-micro-pro",Georgia,serif;
+}
+
+
+/*****events rss*****/
+.main-grid .component .events-rss a {
+	color: #003262;
+	text-decoration: none;
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+.main-grid .component .events-rss h3.block-header {
+	font-size: 12px; 
+	margin-top: 0; 
+	margin-left: 20px; 
+	text-transform: uppercase; 
+	letter-spacing: 1px; 
+	font-weight: 700;  
+}
+.main-grid .component .events-rss .media-list { 
+	list-style: none; 
+	padding-left: 0;
+}
+.main-grid .component .events-rss .media-list .media .media-left,
+.main-grid .component .events-rss .media-list .media .media-body {
+	display: table-cell;
+	vertical-align: top;
+}
+.main-grid .component .events-rss .media-list .media .media-left { padding-right: 10px; }
+.main-grid .component .events-rss .media-list .media .media-left .date {
+	display: inline-block;
+    background: transparent;
+    width: 68px;
+    height: 68px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+.main-grid .component .events-rss .media-list .media .media-left .date .month {
+	margin-top: 0;
+	font-size: 14px;
+	text-transform: uppercase;
+	display: block;
+	line-height: 19px;
+	color: #003262;
+}
+.main-grid .component .events-rss .media-list .media .media-left .date .day { 
+	text-align: center; 
+	font-weight: 400;
+	font-size: 39px;
+	display: block;
+	line-height: 22px;
+	color: #003262;
+	font-family: "freight-micro-pro",Georgia,serif;
+}
+.main-grid .component .events-rss .media-list .media .media-body a { color: #003262; }
+.main-grid .component .events-rss .media-list .media .media-body h3 {
+	margin: 0;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+}
+
+
+/*****quote component*****/
+.main-grid .component .quote.web-founders-rock { background-color: #3b7ea1; }
+.main-grid .component .quote .caption { padding: 20px; }
+.main-grid .component .quote .caption blockquote {
+	font-family: "freight-micro-pro",Arial,Helvetica,sans-serif;
+	padding: 0;
+	margin: 0 0 30px;
+	font-size: 28px;
+	border-left: 0;
+	line-height: 1.2em;
+	color: #fdb515;;
+	font-weight: 600;
+}
+.main-grid .component .quote .caption blockquote .quotename {
+	display: block;
+	font-size: 16px;
+	line-height: 19px;
+	margin-top: 10px;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+
+/*****twitter component*****/
+.main-grid .component .twitter .block-header { 
+	background: #1279bb;
+	text-align: center;
+	color: #fff;
+	width: 40px;
+	margin: 0 auto 10px;
+	background: #1279bb;
+	height: 40px;
+	border-radius: 40px;
+	line-height: 40px;
+}
+.entypo-social.twitter::before {
+	content: '\e8c3';
+}
+.main-grid .component .twitter .livefeed h3 { text-align: center; }
+.main-grid .component .twitter .livefeed h3 a {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: 700;
+	color: #003262;
+	font-family: 'Open Sans',sans-serif;
+}
+.main-grid .component .twitter .livefeed .block-body {
+	text-align: center;
+	padding: 0px 20px;
+	position: relative;
+	margin-bottom: 20px;
+}
+.main-grid .component .twitter .livefeed .block-body a { 
+	text-decoration: none; 
+	color: #003262;
+}
+.main-grid .component .twitter .livefeed p {
+	font-family: 'freight-micro-pro';
+	font-size: 22px;
+	line-height: 1.4;
+	margin: 0 0 10px;
+}
+.main-grid .component .twitter .livefeed .stamp {
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	color: #777;
+}
+
+
+/*****promo no image*****/
+.main-grid .component .promo.no-image {
+	min-height: 90px;
+	text-align: center;
+	background-image: url('../../images/tessellation-bg-04.png'), url('../../images/tessellation-bg-08.png');
+	background-position: right bottom, left bottom;
+	background-repeat: no-repeat, no-repeat;
+	display: table;
+}
+.main-grid .component .promo.solid-background.web-medalist { background-color: #C4820E; }
+.main-grid .component .promo.no-image .block-header a {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	color: #fff;
+	font-family: 'Open Sans',sans-serif;
+	margin: 10px;
+	text-decoration: none;
+}
+.main-grid .component .promo.no-image .caption {
+	padding-top: 15px;
+	padding-bottom: 20px;
+	margin-top: 0;
+	display: table-cell;
+	vertical-align: middle;
+	color: #000000;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 23px;	
+}
+.main-grid .component .promo.no-image .caption h3 {
+	line-height: 31px;
+	margin: 10px;
+	color: #ffffff;
+	font-size: 26px;
+	font-weight: 600;
+	font-family: "freight-micro-pro",Georgia,serif;
+}

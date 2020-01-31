@@ -1,0 +1,17 @@
+@import "entypo.css";
+@import "dashicons.css";
+/*sinple for toolbar menu*/
+.entypo .entypo-social {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+}
+
+/*# sourceMappingURL=fonts.css.map */

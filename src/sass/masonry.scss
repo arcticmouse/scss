@@ -1,0 +1,21 @@
+$block-colors: $soybean, $founders-rock, $medalist;
+$length: length($block-colors);
+
+.masonry {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	grid-gap: 20px;
+
+	@include max-small-width { grid-template-columns: 1fr; }
+	.component {
+		.promo {
+			&.thumbnail {
+				@for $i from 1 through $length {
+					&:nth-of-type(#{$length}n+#{i}){
+						background-color: nth($block-colors, $i);
+					}
+				}
+			}
+		}
+	}
+}

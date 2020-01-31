@@ -1,0 +1,97 @@
+$small-width: 768px;
+
+@mixin min-small-width {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin max-small-width {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+
+
+
+
+body {
+  margin:0;
+  background-color: #ffffff;
+  font-family: $open-sans;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  text-transform: none;
+  color: #003262;
+  letter-spacing: 0;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 0;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: 0px;
+
+  border-top: 1px solid #eee;
+
+  width: 70%;
+  margin-top: 0px;
+  margin-bottom: 0px;  
+}
+
+.content-container { 
+  width: 95%; 
+  max-width: 1170px;
+  height: 100%;
+  margin: auto auto;
+
+  @include max-small-width {
+    .content-container { max-width: auto; }
+  }
+  @include min-small-width {
+    .content-container { max-width: 750px; }
+  }
+  @media (min-width: 992px) {
+    .content-container { max-width: 970px; }
+  }
+  @media (min-width: 1200px) {
+    .content-container { max-width: 1170px; }
+  }
+}
+
+img { width: 100%; }
+
+.screen-reader {
+  display: block !important;
+  left: -9999px !important;
+  position: absolute !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+lead-content {
+  display: grid;
+  p {
+    font-size: 27px;
+    line-height: 38px;
+    margin-bottom: 30px;
+    color: $text-gray;
+    font-family: $freight-georgia;
+  }
+}
